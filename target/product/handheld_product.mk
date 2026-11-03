@@ -21,8 +21,10 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/media_product.mk)
 
 # /product packages
+# Contacts（AOSP 自带联系人）已移除：本 ROM 改用 Connect You，
+# 见 vendor/extra/extra.mk 与 vendor/extra/Android.bp。
+# ContactsProvider / ContactsPicker 等仍保留，第三方联系人应用依赖它们。
 PRODUCT_PACKAGES += \
-    Contacts \
     DeskClock \
     preinstalled-packages-platform-handheld-product.xml \
     QuickSearchBox \
